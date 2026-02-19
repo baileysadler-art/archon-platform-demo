@@ -89,10 +89,8 @@ function Hero() {
           </h1>
 
           {/* Subhead */}
-          <p className="hero-fade-up hero-delay-3 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/50 md:text-xl">
-            The platform that continuously scans, monitors, and protects your AI
-            systems for vulnerabilities, bias, and compliance gaps. No manual
-            audits. No waiting.
+          <p className="hero-fade-up hero-delay-3 mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-white/50 md:text-xl">
+            The platform that continuously scans, monitors, and protects your AI systems for vulnerabilities, bias, and compliance gaps. No manual audits. No waiting.
           </p>
 
           {/* CTAs */}
@@ -143,19 +141,19 @@ function ProblemSection() {
       icon: AlertTriangle,
       stat: "77%",
       label:
-        "of organisations lack essential AI security practices (Accenture 2025)",
+        "of organisations lack essential AI security practices",
     },
     {
       icon: FileWarning,
       stat: "$4.88M",
       label:
-        "average cost of a data breach, and AI makes it worse (IBM 2024)",
+        "average cost of a data breach, and AI makes it worse",
     },
     {
       icon: Scale,
       stat: "2026",
       label:
-        "EU AI Act is coming into force. Non-compliance fines reach up to 7% of global revenue",
+        "EU AI Act is coming into force with non-compliance fines up to 7% of global revenue",
     },
   ];
 
@@ -168,9 +166,8 @@ function ProblemSection() {
             <br />
             <span className="text-white/40">And your biggest risk.</span>
           </h2>
-          <p className="mt-4 text-lg text-white/40">
-            Companies are racing to deploy AI but most have no way to check if
-            it&apos;s actually secure, fair, or compliant.
+          <p className="mt-4 text-pretty text-lg text-white/40">
+            Companies are racing to deploy AI but most have no way to check if it&apos;s actually secure, fair, or compliant.
           </p>
         </div>
 
@@ -182,7 +179,7 @@ function ProblemSection() {
             >
               <p.icon className="mb-4 h-8 w-8 text-[oklch(0.7_0.15_50)]" />
               <div className="text-4xl font-bold text-white">{p.stat}</div>
-              <p className="mt-2 text-base leading-relaxed text-white/40">
+              <p className="mt-2 text-pretty text-base leading-relaxed text-white/40">
                 {p.label}
               </p>
             </div>
@@ -199,7 +196,7 @@ function FeaturesSection() {
       icon: Search,
       title: "Vulnerability Scanning",
       description:
-        "Automated testing for prompt injection, data leaks, and model manipulation. The platform attacks your AI the way a hacker would, so you can fix the gaps first.",
+        "Automated testing for prompt injection, data leaks, and model manipulation. The platform attacks your AI the way a hacker would so you can fix the gaps first.",
     },
     {
       icon: Brain,
@@ -211,7 +208,7 @@ function FeaturesSection() {
       icon: Lock,
       title: "Data Privacy Protection",
       description:
-        "Automatically track where your AI touches personal data and flag compliance risks against GDPR, CCPA, and the EU AI Act.",
+        "Automatically track where your AI touches personal data and flag compliance risks across GDPR, CCPA, and the EU AI Act.",
     },
     {
       icon: Activity,
@@ -223,7 +220,7 @@ function FeaturesSection() {
       icon: Scale,
       title: "Compliance Dashboard",
       description:
-        "One view across EU AI Act, NIST AI RMF, and ISO 42001. See exactly where you stand and what you need to fix, always up to date.",
+        "One view across EU AI Act, NIST AI RMF, and ISO 42001. See exactly where you stand and what needs fixing, always up to date.",
     },
     {
       icon: Eye,
@@ -240,13 +237,11 @@ function FeaturesSection() {
           <div className="mb-4 text-sm font-semibold tracking-widest uppercase text-[oklch(0.7_0.18_185)]">
             Platform Features
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Everything you need to secure AI.<br className="hidden md:block" />{" "}
-            One platform.
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
+            Everything you need to secure AI. One platform.
           </h2>
-          <p className="mt-4 text-lg text-white/40">
-            Plug in your AI systems and get continuous, automated security
-            coverage across every risk area.
+          <p className="mt-4 text-pretty text-lg text-white/40">
+            Plug in your AI systems and get continuous, automated security coverage across every risk area.
           </p>
         </div>
 
@@ -260,7 +255,7 @@ function FeaturesSection() {
                 <s.icon className="h-5 w-5 text-[oklch(0.7_0.18_185)]" />
               </div>
               <h3 className="text-lg font-semibold text-white">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/40">
+              <p className="mt-2 text-pretty text-sm leading-relaxed text-white/40">
                 {s.description}
               </p>
             </div>
@@ -310,7 +305,7 @@ function HowItWorks() {
           <div className="mb-4 text-sm font-semibold tracking-widest uppercase text-[oklch(0.7_0.18_185)]">
             How It Works
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
             From connected to protected in minutes
           </h2>
         </div>
@@ -325,7 +320,7 @@ function HowItWorks() {
                 <s.icon className="h-5 w-5 text-[oklch(0.7_0.18_185)]" />
               </div>
               <h3 className="text-lg font-semibold text-white">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/40">
+              <p className="mt-2 text-pretty text-sm leading-relaxed text-white/40">
                 {s.description}
               </p>
             </div>
@@ -362,10 +357,8 @@ function SocialProof() {
 
         {/* Testimonial */}
         <div className="mx-auto mt-12 max-w-2xl text-center">
-          <p className="text-lg leading-relaxed italic text-white/50">
-            &ldquo;We were spending weeks on manual AI security reviews. Archon
-            does it continuously and catches things we never would have found.
-            It&apos;s the difference between a snapshot and a live feed.&rdquo;
+          <p className="text-pretty text-lg leading-relaxed italic text-white/50">
+            &ldquo;We were spending weeks on manual AI security reviews. Archon does it continuously and catches things we never would have found. It&apos;s the difference between a snapshot and a live feed.&rdquo;
           </p>
           <div className="mt-6">
             <div className="text-sm font-semibold text-white">Sarah Chen</div>
@@ -441,12 +434,11 @@ function PricingSection() {
           <div className="mb-4 text-sm font-semibold tracking-widest uppercase text-[oklch(0.7_0.18_185)]">
             Pricing
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-4xl">
             Simple, transparent pricing.
           </h2>
-          <p className="mt-4 text-lg text-white/40">
-            Start with a 14-day free trial. No credit card required. Cancel
-            anytime.
+          <p className="mt-4 text-pretty text-lg text-white/40">
+            Start with a 14-day free trial. No credit card required. Cancel anytime.
           </p>
         </div>
 
@@ -473,7 +465,7 @@ function PricingSection() {
                 </span>
                 <span className="text-sm text-white/40">{plan.period}</span>
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-white/40">
+              <p className="mt-3 text-pretty text-sm leading-relaxed text-white/40">
                 {plan.description}
               </p>
 
@@ -503,9 +495,8 @@ function PricingSection() {
         {/* Enterprise callout */}
         <div className="mt-8 rounded-2xl border border-white/5 bg-white/[0.02] p-8 text-center">
           <h3 className="text-lg font-semibold text-white">Enterprise</h3>
-          <p className="mx-auto mt-2 max-w-lg text-sm text-white/40">
-            Need custom integrations, on-premise deployment, or dedicated
-            infrastructure? We build around your requirements.
+          <p className="mx-auto mt-2 max-w-lg text-pretty text-sm text-white/40">
+            Need custom integrations, on-premise deployment, or dedicated infrastructure? We build around your requirements.
           </p>
           <a
             href="mailto:hello@archon-ai.com"
@@ -529,13 +520,11 @@ function CTASection() {
           <div className="pointer-events-none absolute top-0 left-1/2 h-[300px] w-[600px] -translate-x-1/2 rounded-full bg-[oklch(0.5_0.15_185/0.15)] blur-[100px]" />
 
           <div className="relative">
-            <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
+            <h2 className="text-balance text-3xl font-bold tracking-tight text-white md:text-5xl">
               Stop guessing. Start protecting.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/40">
-              Connect your AI systems in minutes, get your first security scan
-              today, and know exactly where you stand. 14-day free trial, no
-              credit card required.
+            <p className="mx-auto mt-4 max-w-2xl text-pretty text-lg text-white/40">
+              Connect your AI systems in minutes, get your first security scan today, and know exactly where you stand. 14-day free trial, no credit card required.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
