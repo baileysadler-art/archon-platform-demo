@@ -3,7 +3,6 @@ import {
   ShieldCheck,
   Activity,
   Search,
-  FileWarning,
   Lock,
   Brain,
   ArrowRight,
@@ -14,8 +13,11 @@ import {
   ChevronRight,
   AlertTriangle,
   BarChart3,
-  Users,
-  Phone,
+  FileWarning,
+  MonitorSmartphone,
+  Plug,
+  LayoutDashboard,
+  RefreshCw,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -31,10 +33,10 @@ function Navbar() {
         </div>
         <div className="hidden items-center gap-8 md:flex">
           <a
-            href="#services"
+            href="#features"
             className="text-sm text-white/60 transition hover:text-white"
           >
-            Services
+            Features
           </a>
           <a
             href="#how-it-works"
@@ -53,7 +55,7 @@ function Navbar() {
           href="#pricing"
           className="rounded-lg bg-[oklch(0.7_0.18_185)] px-5 py-2.5 text-sm font-semibold text-[oklch(0.1_0.02_200)] transition hover:bg-[oklch(0.75_0.16_185)]"
         >
-          Book a Free Call
+          Start Free Trial
         </a>
       </div>
     </nav>
@@ -72,34 +74,34 @@ function Hero() {
 
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-3xl text-center">
-          {/* Badge — stagger 1 */}
+          {/* Badge */}
           <div className="hero-fade-up hero-delay-1 mb-8 inline-flex items-center gap-2 rounded-full border border-[oklch(0.7_0.18_185/0.3)] bg-[oklch(0.7_0.18_185/0.1)] px-4 py-1.5 text-sm text-[oklch(0.7_0.18_185)]">
             <ShieldCheck className="h-4 w-4" />
-            Trusted by 50+ enterprise teams
+            AI security on autopilot
           </div>
 
-          {/* Headline — stagger 2 */}
+          {/* Headline */}
           <h1 className="hero-fade-up hero-delay-2 text-4xl leading-[1.1] font-extrabold tracking-tight text-white md:text-6xl lg:text-7xl">
-            Is your AI{" "}
+            Secure your AI.{" "}
             <span className="hero-gradient-text bg-gradient-to-r from-[oklch(0.7_0.18_185)] to-[oklch(0.7_0.15_220)] bg-clip-text text-transparent">
-              actually safe?
+              Automatically.
             </span>
           </h1>
 
-          {/* Subhead — stagger 3 */}
+          {/* Subhead */}
           <p className="hero-fade-up hero-delay-3 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/50 md:text-xl">
-            Most companies deploying AI have no idea what risks they&apos;re
-            carrying. We find the vulnerabilities, biases, and compliance gaps
-            before they become headlines.
+            The platform that continuously scans, monitors, and protects your AI
+            systems for vulnerabilities, bias, and compliance gaps. No manual
+            audits. No waiting.
           </p>
 
-          {/* CTAs — stagger 4 */}
+          {/* CTAs */}
           <div className="hero-fade-up hero-delay-4 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="#pricing"
               className="inline-flex items-center gap-2 rounded-xl bg-[oklch(0.7_0.18_185)] px-8 py-4 text-base font-semibold text-[oklch(0.1_0.02_200)] transition hover:bg-[oklch(0.75_0.16_185)] hover:scale-[1.02] active:scale-[0.98]"
             >
-              Get Your AI Health Check
+              Start Free Trial
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
@@ -110,23 +112,23 @@ function Hero() {
             </a>
           </div>
 
-          {/* Trust line — stagger 5 */}
+          {/* Trust line */}
           <div className="hero-fade-up hero-delay-5 mt-14 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/30">
-            <span className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[oklch(0.7_0.18_185)]" />
-              SOC 2 Compliant
-            </span>
-            <span className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[oklch(0.7_0.18_185)]" />
-              ISO 27001
-            </span>
             <span className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[oklch(0.7_0.18_185)]" />
               EU AI Act Ready
             </span>
             <span className="flex items-center gap-2">
               <Check className="h-4 w-4 text-[oklch(0.7_0.18_185)]" />
+              ISO 42001 Aligned
+            </span>
+            <span className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-[oklch(0.7_0.18_185)]" />
               NIST AI RMF
+            </span>
+            <span className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-[oklch(0.7_0.18_185)]" />
+              Setup in Minutes
             </span>
           </div>
         </div>
@@ -141,19 +143,19 @@ function ProblemSection() {
       icon: AlertTriangle,
       stat: "77%",
       label:
-        "of companies using AI have zero security policy around it",
+        "of organisations lack essential AI security practices (Accenture 2025)",
     },
     {
       icon: FileWarning,
-      stat: "$4.2M",
+      stat: "$4.88M",
       label:
-        "average cost of an AI-related data breach — before legal fees",
+        "average cost of a data breach, and AI makes it worse (IBM 2024)",
     },
     {
       icon: Scale,
-      stat: "Now",
+      stat: "2026",
       label:
-        "EU AI Act is in force. Non-compliance fines reach €35M or 7% of revenue",
+        "EU AI Act is coming into force. Non-compliance fines reach up to 7% of global revenue",
     },
   ];
 
@@ -162,13 +164,13 @@ function ProblemSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            AI is your biggest asset.
+            AI is moving fast.
             <br />
-            <span className="text-white/40">And your biggest risk.</span>
+            <span className="text-white/40">Security isn&apos;t keeping up.</span>
           </h2>
           <p className="mt-4 text-lg text-white/40">
-            You wouldn&apos;t ship software without a security audit. Why are
-            you shipping AI without one?
+            Companies are racing to deploy AI but most have no way to check if
+            it&apos;s actually secure, fair, or compliant.
           </p>
         </div>
 
@@ -191,64 +193,65 @@ function ProblemSection() {
   );
 }
 
-function ServicesSection() {
-  const services = [
+function FeaturesSection() {
+  const features = [
     {
       icon: Search,
-      title: "Vulnerability Assessment",
+      title: "Vulnerability Scanning",
       description:
-        "We attack your AI the way a hacker would — prompt injection, data extraction, model theft — so you can patch the holes before someone exploits them.",
+        "Automated testing for prompt injection, data leaks, and model manipulation. The platform attacks your AI the way a hacker would, so you can fix the gaps first.",
     },
     {
       icon: Brain,
-      title: "Bias & Fairness Audit",
+      title: "Bias Detection",
       description:
-        "Uncover hidden biases that could trigger discrimination lawsuits, lost customers, or front-page scandals. Get proof your models treat everyone fairly.",
+        "Continuous monitoring for hidden biases that could trigger lawsuits, lost customers, or front-page scandals. Get real-time alerts when fairness drifts.",
     },
     {
       icon: Lock,
-      title: "Data Privacy Review",
+      title: "Data Privacy Protection",
       description:
-        "Know exactly where your AI touches PII — and whether it complies with GDPR, CCPA, and the AI regulations heading your way.",
+        "Automatically track where your AI touches personal data and flag compliance risks against GDPR, CCPA, and the EU AI Act.",
     },
     {
       icon: Activity,
-      title: "Performance Health Check",
+      title: "Performance Monitoring",
       description:
-        "Model drift, hallucination spikes, latency creep — we catch silent failures that erode trust and cost money before your users notice.",
+        "Catch model drift, hallucination spikes, and latency creep before your users notice. Real-time dashboards and alerts keep you in control.",
     },
     {
       icon: Scale,
-      title: "Compliance Mapping",
+      title: "Compliance Dashboard",
       description:
-        "EU AI Act, NIST AI RMF, ISO 42001 — we map every AI system to the frameworks that apply to you and flag exactly what&apos;s missing.",
+        "One view across EU AI Act, NIST AI RMF, and ISO 42001. See exactly where you stand and what you need to fix, always up to date.",
     },
     {
       icon: Eye,
-      title: "AI Supply Chain Audit",
+      title: "Supply Chain Risk",
       description:
-        "Every third-party model, API, and dataset you rely on is a risk you didn&apos;t build. We audit your entire AI supply chain so nothing slips through.",
+        "Every third-party model, API, and dataset you rely on is tracked and risk-scored automatically. Nothing slips through unnoticed.",
     },
   ];
 
   return (
-    <section id="services" className="relative py-20 md:py-28">
+    <section id="features" className="relative py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mb-4 text-sm font-semibold tracking-widest uppercase text-[oklch(0.7_0.18_185)]">
-            What We Check
+            Platform Features
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Six attack surfaces. One report.<br className="hidden md:block" /> Zero guesswork.
+            Everything you need to secure AI.<br className="hidden md:block" />{" "}
+            One platform.
           </h2>
           <p className="mt-4 text-lg text-white/40">
-            We audit every layer of your AI stack so you know exactly where
-            you&apos;re exposed and how to fix it.
+            Plug in your AI systems and get continuous, automated security
+            coverage across every risk area.
           </p>
         </div>
 
         <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/5 bg-white/5 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => (
+          {features.map((s, i) => (
             <div
               key={i}
               className="group bg-[oklch(0.13_0.02_200)] p-8 transition hover:bg-[oklch(0.15_0.025_200)]"
@@ -272,31 +275,31 @@ function HowItWorks() {
   const steps = [
     {
       step: "01",
-      title: "Free Discovery Call",
+      title: "Connect Your AI",
       description:
-        "30 minutes. We learn your AI stack, threat model, and regulatory exposure. You get an honest assessment of your risk — no sales pitch.",
-      icon: Phone,
+        "Plug in your AI systems through our API or one-click integrations. Works with any LLM, chatbot, or AI pipeline. Setup takes minutes, not weeks.",
+      icon: Plug,
     },
     {
       step: "02",
-      title: "Deep Assessment",
+      title: "Automated Scan",
       description:
-        "Over 10 business days, our team runs automated scans and manual red-teaming across all six audit areas.",
+        "The platform runs a full security scan across all six risk areas: vulnerabilities, bias, privacy, performance, compliance, and supply chain.",
       icon: Search,
     },
     {
       step: "03",
-      title: "Report & Roadmap",
+      title: "Live Dashboard",
       description:
-        "You get a risk-scored report with every finding, an executive summary your board can read, and a prioritized fix list.",
-      icon: BarChart3,
+        "See every risk scored and prioritised in real time. Get a clear view of what needs fixing, with actionable steps for each issue.",
+      icon: LayoutDashboard,
     },
     {
       step: "04",
-      title: "Fix & Monitor",
+      title: "Continuous Monitoring",
       description:
-        "We help you remediate the critical issues and optionally monitor your systems so new risks never go unnoticed.",
-      icon: Activity,
+        "Your AI systems are monitored 24/7. New vulnerabilities, drift, or compliance changes trigger instant alerts so nothing goes unnoticed.",
+      icon: RefreshCw,
     },
   ];
 
@@ -308,7 +311,7 @@ function HowItWorks() {
             How It Works
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            From first call to full clarity in 2 weeks
+            From connected to protected in minutes
           </h2>
         </div>
 
@@ -335,10 +338,10 @@ function HowItWorks() {
 
 function SocialProof() {
   const stats = [
-    { value: "200+", label: "AI Systems Audited" },
-    { value: "98%", label: "Client Retention Rate" },
-    { value: "<12hr", label: "Avg First Response" },
-    { value: "40+", label: "Industries Served" },
+    { value: "85-90%", label: "Gross Margins" },
+    { value: "24/7", label: "Continuous Monitoring" },
+    { value: "<5 min", label: "Setup Time" },
+    { value: "100%", label: "Automated Scanning" },
   ];
 
   return (
@@ -358,12 +361,11 @@ function SocialProof() {
         </div>
 
         {/* Testimonial */}
-        <div className="mt-12 mx-auto max-w-2xl text-center">
-          <p className="text-lg leading-relaxed text-white/50 italic">
-            &ldquo;Archon AI found a prompt injection vulnerability in our
-            customer-facing chatbot that would have exposed 400K user records.
-            Their team flagged it, helped us patch it, and had the fix verified
-            — all within 48 hours.&rdquo;
+        <div className="mx-auto mt-12 max-w-2xl text-center">
+          <p className="text-lg leading-relaxed italic text-white/50">
+            &ldquo;We were spending weeks on manual AI security reviews. Archon
+            does it continuously and catches things we never would have found.
+            It&apos;s the difference between a snapshot and a live feed.&rdquo;
           </p>
           <div className="mt-6">
             <div className="text-sm font-semibold text-white">Sarah Chen</div>
@@ -380,54 +382,54 @@ function SocialProof() {
 function PricingSection() {
   const plans = [
     {
-      name: "Health Check",
-      price: "4,500",
-      period: "one-time",
+      name: "Starter",
+      price: "750",
+      period: "/month",
       description:
-        "A single AI system — fully tested, scored, and documented in 10 business days.",
+        "For teams getting started with AI security. Connect up to 3 AI systems and get continuous protection.",
       features: [
-        "One AI system, six audit areas",
-        "Red-team vulnerability testing",
-        "Bias & fairness scan",
-        "Compliance gap analysis",
-        "Risk-scored findings report",
-        "30 days of remediation support",
+        "Up to 3 AI systems",
+        "Automated vulnerability scanning",
+        "Bias detection",
+        "Compliance dashboard",
+        "Weekly scan reports",
+        "Email support",
       ],
-      cta: "Book Health Check",
+      cta: "Start Free Trial",
       highlighted: false,
     },
     {
-      name: "Full Audit",
-      price: "12,000",
-      period: "one-time",
+      name: "Professional",
+      price: "2,000",
+      period: "/month",
       description:
-        "Every AI system in your org — audited, mapped, and risk-ranked with a board-ready report.",
+        "For growing teams with multiple AI systems. Full scanning, real-time monitoring, and priority support.",
       features: [
-        "Unlimited AI systems in scope",
-        "All six audit areas per system",
-        "Adversarial penetration testing",
-        "Executive summary + technical deep-dive",
-        "Prioritized remediation roadmap",
-        "90 days of remediation support",
+        "Up to 15 AI systems",
+        "All six security areas",
+        "Real-time monitoring and alerts",
+        "Supply chain risk tracking",
+        "Custom compliance reports",
+        "Priority support",
       ],
-      cta: "Book Full Audit",
+      cta: "Start Free Trial",
       highlighted: true,
     },
     {
-      name: "Continuous",
-      price: "3,500",
+      name: "Business",
+      price: "4,500",
       period: "/month",
       description:
-        "Always-on protection. Catch new vulnerabilities the day they appear, not the day they explode.",
+        "For enterprises running AI at scale. Unlimited systems, advanced analytics, and dedicated support.",
       features: [
-        "24/7 automated threat monitoring",
-        "Real-time model drift alerts",
-        "Monthly vulnerability scans",
-        "Quarterly deep audit included",
-        "Dedicated security advisor",
-        "Regulatory change alerts",
+        "Unlimited AI systems",
+        "Advanced threat analytics",
+        "Custom integrations and API access",
+        "Multi-team dashboards",
+        "Dedicated account manager",
+        "SLA-backed uptime guarantee",
       ],
-      cta: "Start Monitoring",
+      cta: "Start Free Trial",
       highlighted: false,
     },
   ];
@@ -440,11 +442,11 @@ function PricingSection() {
             Pricing
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Know your risk. Fix your risk. Stay safe.
+            Simple, transparent pricing.
           </h2>
           <p className="mt-4 text-lg text-white/40">
-            Every plan starts with a free discovery call. No commitment until
-            you&apos;re confident we&apos;re the right fit.
+            Start with a 14-day free trial. No credit card required. Cancel
+            anytime.
           </p>
         </div>
 
@@ -465,7 +467,7 @@ function PricingSection() {
               )}
               <h3 className="text-lg font-semibold text-white">{plan.name}</h3>
               <div className="mt-4 flex items-baseline gap-1">
-                <span className="text-sm text-white/40">$</span>
+                <span className="text-sm text-white/40">&pound;</span>
                 <span className="text-4xl font-bold text-white">
                   {plan.price}
                 </span>
@@ -498,11 +500,21 @@ function PricingSection() {
           ))}
         </div>
 
-        {/* Risk reversal */}
-        <p className="mt-8 text-center text-sm text-white/30">
-          Not sure which plan? Book a free 30-minute discovery call — zero
-          obligation, zero pressure.
-        </p>
+        {/* Enterprise callout */}
+        <div className="mt-8 rounded-2xl border border-white/5 bg-white/[0.02] p-8 text-center">
+          <h3 className="text-lg font-semibold text-white">Enterprise</h3>
+          <p className="mx-auto mt-2 max-w-lg text-sm text-white/40">
+            Need custom integrations, on-premise deployment, or dedicated
+            infrastructure? We build around your requirements.
+          </p>
+          <a
+            href="mailto:hello@archon-ai.com"
+            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[oklch(0.7_0.18_185)] transition hover:text-[oklch(0.75_0.16_185)]"
+          >
+            Talk to Sales
+            <ChevronRight className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -518,22 +530,19 @@ function CTASection() {
 
           <div className="relative">
             <h2 className="text-3xl font-bold tracking-tight text-white md:text-5xl">
-              The next AI breach will cost millions.
-              <br />
-              <span className="text-white/40">
-                Your health check costs a fraction.
-              </span>
+              Stop guessing. Start protecting.
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-white/40">
-              In 2 weeks, you&apos;ll know exactly where your AI systems are exposed
-              and have a clear plan to fix every gap. Start with a free call.
+              Connect your AI systems in minutes, get your first security scan
+              today, and know exactly where you stand. 14-day free trial, no
+              credit card required.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="mailto:hello@archon-ai.com"
                 className="inline-flex items-center gap-2 rounded-xl bg-[oklch(0.7_0.18_185)] px-8 py-4 text-base font-semibold text-[oklch(0.1_0.02_200)] transition hover:bg-[oklch(0.75_0.16_185)] hover:scale-[1.02] active:scale-[0.98]"
               >
-                Book a Free Discovery Call
+                Start Your Free Trial
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
@@ -560,11 +569,11 @@ function Footer() {
           <span className="font-semibold text-white">Archon AI</span>
         </div>
         <div className="flex gap-8 text-sm text-white/30">
-          <a href="#services" className="transition hover:text-white/60">
-            Services
+          <a href="#features" className="transition hover:text-white/60">
+            Features
           </a>
           <a href="#how-it-works" className="transition hover:text-white/60">
-            Process
+            How It Works
           </a>
           <a href="#pricing" className="transition hover:text-white/60">
             Pricing
@@ -590,7 +599,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ProblemSection />
-      <ServicesSection />
+      <FeaturesSection />
       <HowItWorks />
       <SocialProof />
       <PricingSection />
