@@ -164,9 +164,9 @@ function ProblemSection() {
       <div className="mx-auto max-w-6xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            AI is moving fast.
+            AI is your biggest asset.
             <br />
-            <span className="text-white/40">Security isn&apos;t keeping up.</span>
+            <span className="text-white/40">And your biggest risk.</span>
           </h2>
           <p className="mt-4 text-lg text-white/40">
             Companies are racing to deploy AI but most have no way to check if
